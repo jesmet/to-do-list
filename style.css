@@ -3,65 +3,56 @@
   min-height: 100vh;
   background: linear-gradient(135deg, #153677, #4e085f);
   padding: 10px;
-  color: white;  /* Make text more visible */
-  font-family: 'Poppins', sans-serif;
+
+  display: flex;               /* Center horizontally & vertically */
+  justify-content: center;
+  align-items: center;
+}
+
+.todo-app {
+  background: white;
+  width: 100%;
+  max-width: 500px;            /* Limit size */
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
 }
 
 .todo-app h2 {
-  color: #fff;  /* White text for visibility */
+  color: #002765;
   display: flex;
   align-items: center;
-  gap: 10px;    /* Space between text and image */
   margin-bottom: 20px;
 }
 
-ul {
-  list-style: none; /* Remove default bullets */
-  padding-left: 0;
-}
-
-ul li {
-  position: relative;
-  padding-left: 50px;
-  margin-bottom: 15px;
-  cursor: pointer;
-  color: white;  /* Text color */
-}
-
-ul li::before {
-  content: '';
-  position: absolute;
-  height: 28px;
-  width: 28px;
-  border-radius: 50%;
-  background-image: url(images/unchecked.png);
-  background-size: cover;
-  background-position: center;
-  top: 8px;   /* Adjust vertical position */
-  left: 8px;
-}
-
-ul li.checked::before {
-  background-image: url(images/checked.png);
-}
-
-ul li span {
-  position: absolute;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+.todo-app h2 img {
   width: 30px;
-  height: 30px;
-  font-size: 22px;
-  color: #eee;
-  line-height: 30px;
-  text-align: center;
-  border-radius: 50%;
-  cursor: pointer;
-  transition: background 0.3s;
+  margin-left: 10px;
 }
 
-ul li span:hover {
-  background: #edeef0;
-  color: #555;
+.row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.row input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  outline: none;
+  background: #f0f0f0;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.row button {
+  padding: 10px 20px;
+  background: #002765;
+  color: white;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  margin-left: 10px;
+  cursor: pointer;
 }
