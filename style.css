@@ -1,28 +1,44 @@
-.container{
+.container {
   width: 100%;
   min-height: 100vh;
   background: linear-gradient(135deg, #153677, #4e085f);
   padding: 10px;
+  color: white;  /* Make text more visible */
+  font-family: 'Poppins', sans-serif;
 }
 
 .todo-app h2 {
-  color: #002765;
+  color: #fff;  /* White text for visibility */
   display: flex;
   align-items: center;
+  gap: 10px;    /* Space between text and image */
   margin-bottom: 20px;
 }
 
+ul {
+  list-style: none; /* Remove default bullets */
+  padding-left: 0;
+}
+
+ul li {
+  position: relative;
+  padding-left: 50px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  color: white;  /* Text color */
+}
+
 ul li::before {
-   content: '';
-   position: absolute;
-   height: 28px;
-   width: 28px;
-   border-radius: 50%;
-   background-image: url(images/unchecked.png);
-   background-size: cover;
-   background-position: center;
-   top: 12px;
-   left: 8px;
+  content: '';
+  position: absolute;
+  height: 28px;
+  width: 28px;
+  border-radius: 50%;
+  background-image: url(images/unchecked.png);
+  background-size: cover;
+  background-position: center;
+  top: 8px;   /* Adjust vertical position */
+  left: 8px;
 }
 
 ul li.checked::before {
@@ -32,17 +48,20 @@ ul li.checked::before {
 ul li span {
   position: absolute;
   right: 0;
-  top: 5px;
-  width: 40px;
-  height: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
   font-size: 22px;
-  color: #555;
-  line-height: 40px;
+  color: #eee;
+  line-height: 30px;
   text-align: center;
   border-radius: 50%;
   cursor: pointer;
+  transition: background 0.3s;
 }
 
 ul li span:hover {
   background: #edeef0;
+  color: #555;
 }
