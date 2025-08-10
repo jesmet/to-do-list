@@ -9,7 +9,7 @@ function addTask(){
     li.innerHTML = inputBox.value;
 
     let span = document.createElement("span");
-    span.innerHTML = "\u00d7"; // Unicode for multiplication '×' symbol (used as delete button)
+    span.innerHTML = "\u00d7";
     li.appendChild(span);
 
     listContainer.appendChild(li);
